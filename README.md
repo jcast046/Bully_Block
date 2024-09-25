@@ -1,5 +1,6 @@
 # Team Members 
-  Trevor Newberry, Jacob Braley, Joshua Castillo, Reagan McCoy, Skyler Williams, Nomar Rodriguez, Peter Spadaro
+  Trevor Newberry, Jacob Braley, Joshua Castillo, 
+  Reagan McCoy, Skyler Williams, Nomar Rodriguez, Peter Spadaro
 
 ## Overview
 The Cyberbullying Detection System is a web application designed to enhance the safety and educational quality of K-12 public schools by integrating directly with the Canvas Learning Management System (LMS). This system uses advanced Natural Language Processing (NLP) techniques to monitor, analyze, and alert on potential cyberbullying communications in real time.
