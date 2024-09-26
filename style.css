@@ -35,6 +35,35 @@ section {
   box-shadow: 0 0 10px #ccc;
 }
 
+section#team .image {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+}
+
+section#team .image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+section#team .image h3, 
+section#team .image p {
+  margin: 10px 0 0 0;
+  width: 200px;
+}
+
+section#team .image h3 {
+  margin-top: 10px;
+}
+
+section#team .image p {
+  font-size: 14px;
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
