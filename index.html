@@ -16,7 +16,13 @@
   <header>
     <h1>Cyber Bullying Detection System</h1>
     <nav>
-      <ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
         <li><a href="#overview">Overview</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#technology">Technology</a></li>
@@ -89,7 +95,6 @@
         <h3>Nomar Rodriguez</h3>
         <p>22, CS Major.</p>
       </div>
-      <!-- Repeat for other members -->
     </section>
 
     <section id="presentations">
@@ -105,6 +110,24 @@
     <p>Contact us at <a href="mailto:jcast046@odu.edu">jcast046@odu.edu</a></p>
   </footer>
 
+  <script>
+    /* Reveals the nav links when the menu button is pressed */
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function() {
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navLinks.classList.add('close');
+        menuToggle.classList.remove('open');
+      }
+      else {
+        navLinks.classList.remove('close');
+        navLinks.classList.add('open');
+        menuToggle.classList.add('open');
+      }
+    });
+  </script>
 </body>
 
 </html>
