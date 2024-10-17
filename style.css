@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -18,17 +18,17 @@ header {
   color: white;
   padding: 10px 0;
   text-align: center;
-  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
-header .nav-container img{
+header .nav-container img {
   width: 300px;
   margin-left: 20px;
   margin-bottom: 10px;
   height: auto;
 }
 
-header .nav-container{
+header .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,9 +42,11 @@ header h1 {
 
 main {
   margin-top: 140px;
+  /* Keep this to account for fixed header */
+  padding: 20px;
 }
 
-main p{
+main p {
   color: rgb(36, 36, 36);
 }
 
@@ -72,11 +74,12 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   color: #6fa9ff;
   transition: color 0.3s;
 }
 
+/* Update section selectors to remove ID references since they're now on separate pages */
 section {
   margin: 20px;
   padding: 20px;
@@ -85,36 +88,37 @@ section {
   box-shadow: 0 0 10px #ccc;
 }
 
-section#team .image-matrix{
+/* Update team section selector */
+.image-matrix {
   text-align: center;
 }
 
-section#team .image {
+.image {
   display: inline-block;
   text-align: center;
   margin: 10px;
   width: 200px;
 }
 
-section#team .image img {
+.image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 20%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-section#team .image h3, 
-section#team .image p {
+.image h3,
+.image p {
   margin: 10px 0 0 0;
   width: 200px;
 }
 
-section#team .image h3 {
+.image h3 {
   margin-top: 10px;
 }
 
-section#team .image p {
+.image p {
   font-size: 14px;
 }
 
@@ -127,7 +131,7 @@ section#team .image p {
 .presentation-container iframe {
   max-width: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -137,9 +141,17 @@ footer {
   color: white;
 }
 
-   
-/* Settings for smaller screens-------------- */
+footer a {
+  color: white;
+  text-decoration: none;
+}
 
+footer a:hover {
+  color: #6fa9ff;
+  transition: color 0.3s;
+}
+
+/* Settings for smaller screens */
 @media (max-width: 970px) {
   header h1 {
     font-size: 28px;
@@ -160,109 +172,109 @@ footer {
     padding: 20px;
   }
 
-    /* Menu (hamburger) button appearance--------------*/
-    .menu-toggle {
-      width: 25px;
-      height: 30px;
-      position: relative;
-      margin: 10px auto;
-      margin-bottom: 5px;
-      margin-right: 40px;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      -o-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-      cursor: pointer;
-      
-    }
-  
-    .menu-toggle:hover span{
-      background: #6fa9ff;
-      transition: 0.3s;
-    }
-  
-    .menu-toggle span {
-      display: block;
-      position: absolute;
-      height: 4px;
-      width: 100%;
-      background: white;
-      border-radius: 4px;
-      opacity: 1;
-      left: 0;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .25s ease-in-out;
-      -moz-transition: .25s ease-in-out;
-      -o-transition: .25s ease-in-out;
-      transition: .25s ease-in-out;
-    }
-  
-    .menu-toggle span:nth-child(1) {
-      top: 4px;
-    }
-  
-    .menu-toggle span:nth-child(2), .menu-toggle span:nth-child(3) {
-      top: 12px;
-    }
-  
-    .menu-toggle span:nth-child(4) {
-      top: 20px;
-    }
-  
-    .menu-toggle.open span:nth-child(1) {
-      top: 18px;
-      width: 0%;
-      left: 50%;
-    }
-  
-    .menu-toggle.open span:nth-child(2) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  
-    .menu-toggle.open span:nth-child(3) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-    }
-  
-    .menu-toggle.open span:nth-child(4) {
-      top: 18px;
-      width: 0%;
-      left: 50%;
-    }
-    /* End of menu (hamburger) button appearance-------------- */
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.5s ease;
-    }
-  
-    .nav-links.open {
-      display: flex;
-      animation: dropDown 0.5s ease;
-      max-height: 300px;
-    }
-  
-    .nav-links.close {
-      display: flex;
-      animation: raiseUp 0.5s forwards;
-      max-height: 0px;
-    }
+  /* Menu (hamburger) button appearance */
+  .menu-toggle {
+    width: 25px;
+    height: 30px;
+    position: relative;
+    margin: 10px auto;
+    margin-bottom: 5px;
+    margin-right: 40px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover span {
+    background: #6fa9ff;
+    transition: 0.3s;
+  }
+
+  .menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+  /* Rest of the menu toggle styles remain the same */
+  .menu-toggle span:nth-child(1) {
+    top: 4px;
+  }
+
+  .menu-toggle span:nth-child(2),
+  .menu-toggle span:nth-child(3) {
+    top: 12px;
+  }
+
+  .menu-toggle span:nth-child(4) {
+    top: 20px;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .menu-toggle.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    animation: dropDown 0.5s ease;
+    max-height: 300px;
+  }
+
+  .nav-links.close {
+    display: flex;
+    animation: raiseUp 0.5s forwards;
+    max-height: 0px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -270,7 +282,7 @@ footer {
     font-size: 18px;
   }
 
-  header .nav-container img{
+  header .nav-container img {
     width: 150px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -281,20 +293,34 @@ footer {
     font-size: 15px;
     gap: 15px;
   }
-
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes dropDown{
-    from {max-height: 0;}
-    to {max-height: 300px;}
+@keyframes dropDown {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 300px;
+  }
 }
 
-@keyframes raiseUp{
-    from {max-height: 300px;}
-    to {max-height: 0;}
+@keyframes raiseUp {
+  from {
+    max-height: 300px;
+  }
+
+  to {
+    max-height: 0;
+  }
 }
