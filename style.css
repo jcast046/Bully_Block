@@ -9,6 +9,15 @@ body {
   animation: fadeIn 1s;
 }
 
+body {
+  background-image: url('images/logo-white.png'); 
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+}
+
+
 header {
   position: fixed;
   top: 0;
