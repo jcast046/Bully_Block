@@ -1,13 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
-
+/*
 body {
   font-family: 'Arial', sans-serif;
   background: #f4f4f4;
   margin: 0;
   animation: fadeIn 1s;
-}
+} */
 
 body {
   background-image: url('images/logo-white.png'); 
