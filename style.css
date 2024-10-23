@@ -11,7 +11,7 @@ body {
 
 body {
   background-image: url('images/IMG_20220426_182131_4.jpg'); 
-  background-size: 100% 50%; /* Cover the entire page */
+  background-size: 100% 60%; /* Cover the entire page */
   background-position: bottom; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-attachment: fixed; /* Optional: makes the background fixed during scroll */
