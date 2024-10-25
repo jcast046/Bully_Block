@@ -11,10 +11,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* Background image settings */
   background-image: url('images/bkgd-1.svg'); 
   background-size: auto; /* Cover the entire page */
-  background-position: bottom; /* Center the background image */
-  background-repeat: repeat; /* Do not repeat the image */
+  background-position: bottom;
+  background-repeat: repeat;
   background-attachment: fixed; /* Optional: makes the background fixed during scroll */
 }
 
