@@ -1,20 +1,25 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
-/*
+
 body {
   font-family: 'Arial', sans-serif;
   background: #f4f4f4;
   margin: 0;
-  animation: fadeIn 1s;
-} */
-
-body {
-  background-image: url('images/IMG_20220426_182131_4.jpg'); 
-  background-size: 100% 60%; /* Cover the entire page */
+  animation: fadeIn 0.2s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('images/bkgd-1.svg'); 
+  background-size: auto; /* Cover the entire page */
   background-position: bottom; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: repeat; /* Do not repeat the image */
   background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+}
+
+body.fade-out {
+  animation: fadeOut 0.2s forwards;
 }
 
 
@@ -49,9 +54,19 @@ header h1 {
   font-size: 37px;
 }
 
+.squashed-image-container{
+  text-align: center;
+}
+
+.squashed-image-container img {
+  width: 800px;
+  height: 200px;
+}
+
 main {
+  flex: 1; /* Fill remaining space */
   margin-top: 140px;
-  /* Keep this to account for fixed header */
+  /* Accounts for fixed header when flex-box is not used */
   padding: 20px;
 }
 
@@ -311,6 +326,16 @@ footer a:hover {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 

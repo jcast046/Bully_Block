@@ -13,3 +13,14 @@ menuToggle.addEventListener('click', function () {
         menuToggle.classList.add('open');
     }
 });
+
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 200);
+    });
+});
