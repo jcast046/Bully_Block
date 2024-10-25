@@ -14,6 +14,7 @@ menuToggle.addEventListener('click', function () {
     }
 });
 
+// Fade-out effect
 document.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
         event.preventDefault();
@@ -23,4 +24,12 @@ document.querySelectorAll('a').forEach(anchor => {
             window.location.href = href;
         }, 200);
     });
+});
+
+// Parallax scrolling effect
+window.addEventListener('scroll', function() {
+    // Get the scrolled distance once the scroll event is triggered
+    const scrolled = window.scrollY;
+    // Adjust the background position to be 20% of the current scrolled distance
+    this.document.body.style.backgroundPositionY = -(scrolled * 0.2) + 'px';
 });
