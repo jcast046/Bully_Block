@@ -27,9 +27,15 @@ document.querySelectorAll('a').forEach(anchor => {
 });
 
 // Parallax scrolling effect
-window.addEventListener('scroll', function() {
+function updateBackgroundPosition() {
     // Get the scrolled distance once the scroll event is triggered
     const scrolled = window.scrollY;
     // Adjust the background position to be 20% of the current scrolled distance
     this.document.body.style.backgroundPositionY = -(scrolled * 0.2) + 'px';
-});
+}
+
+// Update background position as soon as the page loads,
+// rather than waiting for the first scroll event
+updateBackgroundPosition();
+
+window.addEventListener('scroll', updateBackgroundPosition);
