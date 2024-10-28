@@ -37,7 +37,7 @@ header {
 }
 
 header .nav-container img {
-  width: 300px;
+  width: 200px;
   margin-left: 20px;
   margin-bottom: 10px;
   height: auto;
@@ -69,10 +69,13 @@ main {
   margin-top: 140px;
   /* Accounts for fixed header when flex-box is not used */
   padding: 20px;
+  color: rgb(63, 63, 63);
 }
 
 main p {
   color: rgb(36, 36, 36);
+  font-size: 18px;
+  text-align: justify;
 }
 
 nav ul {
@@ -110,12 +113,82 @@ section {
   padding: 20px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #6e6e6e;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section .section-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#features ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+#features li {
+  padding: 10px;
+  box-shadow: 0 2px 5px #ccc;
+  border-radius: 5px;
+}
+
+#features li p {
+  text-align: left;
 }
 
 /* Update team section selector */
 .image-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   text-align: center;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #333;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 3%;
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: 0 0 10px #333;
+}
+
+.card .card-content {
+  flex: 1;
+  text-align: left;
+}
+
+.card .card-content hr, 
+.card .card-content h3,
+.card .card-content h4, 
+.card .card-content p {
+  margin: 8px 0;
+  color:#191b1d
+}
+
+.card .card-content hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.164);
 }
 
 .image {
@@ -147,13 +220,13 @@ section {
   font-size: 14px;
 }
 
-.presentation-container {
+.presentation-container, .docs-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.presentation-container iframe {
+.presentation-container, .docs-container iframe {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
