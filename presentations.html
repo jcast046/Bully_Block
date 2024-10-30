@@ -14,14 +14,16 @@
             margin-bottom: 40px; /* Adds space between presentations */
             text-align: center; /* Center the content */
         }
+        .presentation-container h3 {
+            margin-bottom: 10px; /* Space below the title */
+        }
         #presentations iframe {
-            margin-left: 0px;
             width: 100%; /* Make the iframe responsive */
             height: 647px; /* Fixed height for the iframe */
         }
         .download-link {
-            margin-top: 10px; /* Adds space above the download link */
-            display: inline-block;
+            display: block;
+            margin: 10px auto 0; /* Centers the link below each presentation */
             font-size: 16px;
             color: blue; /* Change color for visibility */
             text-decoration: underline; /* Add underline for better indication */
@@ -59,20 +61,20 @@
             <div class="presentation-container">
                 <h3>Feasibility Presentation</h3> <!-- Header for the first presentation -->
                 <iframe
-                    src="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/embed?start=false&loop=false&delayms=3000"
+                    src="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/embed?start=false&loop=false&delayms=60000"
                     frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
                     webkitallowfullscreen="true" tabindex="-1"></iframe>
-                <a href="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/export/pdf" 
+                <a href="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/export?format=pdf" 
                    class="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
             </div>
 
             <div class="presentation-container">
                 <h3>Design Presentation</h3> <!-- Header for the second presentation -->
                 <iframe
-                    src="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/embed?start=false&loop=false&delayms=3000"
-                    frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
+                    src="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/embed?start=false&loop=false&delayms=60000" 
+                    frameborder="0" allowfullscreen="true" mozallowfullscreen="true" 
                     webkitallowfullscreen="true" tabindex="-1"></iframe>
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/export/pdf" 
+                <a href="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/export?format=pdf" 
                    class="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
             </div>
         </section>
