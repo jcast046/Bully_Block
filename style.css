@@ -11,18 +11,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Background image settings */
   background-image: url('images/bkgd-1.svg'); 
-  background-size: auto; /* Cover the entire page */
+  background-size: auto;
   background-position: bottom;
   background-repeat: repeat;
-  background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+  background-attachment: fixed;
 }
 
 body.fade-out {
   animation: fadeOut 0.2s forwards;
 }
-
 
 header {
   position: fixed;
@@ -55,7 +53,7 @@ header h1 {
   font-size: 37px;
 }
 
-.squashed-image-container{
+.squashed-image-container {
   text-align: center;
 }
 
@@ -65,9 +63,8 @@ header h1 {
 }
 
 main {
-  flex: 1; /* Fill remaining space */
+  flex: 1;
   margin-top: 140px;
-  /* Accounts for fixed header when flex-box is not used */
   padding: 20px;
   color: rgb(63, 63, 63);
 }
@@ -107,7 +104,6 @@ nav ul li a:hover {
   transition: color 0.3s;
 }
 
-/* Update section selectors to remove ID references since they're now on separate pages */
 section {
   margin: 20px;
   padding: 20px;
@@ -132,7 +128,6 @@ section .section-image {
   gap: 20px;
   list-style-type: none;
   padding: 0;
-  
 }
 
 #features li {
@@ -145,7 +140,6 @@ section .section-image {
   text-align: left;
 }
 
-/* Update team section selector */
 .image-matrix {
   display: flex;
   flex-direction: column;
@@ -178,12 +172,12 @@ section .section-image {
   text-align: left;
 }
 
-.card .card-content hr, 
+.card .card-content hr,
 .card .card-content h3,
-.card .card-content h4, 
+.card .card-content h4,
 .card .card-content p {
   margin: 8px 0;
-  color:#191b1d
+  color: #191b1d;
 }
 
 .card .card-content hr {
@@ -220,13 +214,15 @@ section .section-image {
   font-size: 14px;
 }
 
-.presentation-container, .docs-container {
+.presentation-container,
+.docs-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.presentation-container, .docs-container iframe {
+.presentation-container,
+.docs-container iframe {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -249,7 +245,6 @@ footer a:hover {
   transition: color 0.3s;
 }
 
-/* Settings for smaller screens */
 @media (max-width: 970px) {
   header h1 {
     font-size: 28px;
@@ -270,7 +265,6 @@ footer a:hover {
     padding: 20px;
   }
 
-  /* Menu (hamburger) button appearance */
   .menu-toggle {
     width: 25px;
     height: 30px;
@@ -278,13 +272,7 @@ footer a:hover {
     margin: 10px auto;
     margin-bottom: 5px;
     margin-right: 40px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
   }
@@ -303,17 +291,9 @@ footer a:hover {
     border-radius: 4px;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
 
-  /* Rest of the menu toggle styles remain the same */
   .menu-toggle span:nth-child(1) {
     top: 4px;
   }
@@ -334,16 +314,10 @@ footer a:hover {
   }
 
   .menu-toggle.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
   .menu-toggle.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 
@@ -397,7 +371,6 @@ footer a:hover {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -407,28 +380,25 @@ footer a:hover {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
 }
 
 @keyframes dropDown {
-  from {
-    max-height: 0;
+  0% {
+    transform: scaleY(0);
   }
-
-  to {
-    max-height: 300px;
+  100% {
+    transform: scaleY(1);
   }
 }
 
 @keyframes raiseUp {
-  from {
-    max-height: 300px;
+  0% {
+    transform: scaleY(1);
   }
-
-  to {
-    max-height: 0;
+  100% {
+    transform: scaleY(0);
   }
 }
