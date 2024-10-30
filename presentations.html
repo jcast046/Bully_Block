@@ -7,13 +7,23 @@
     <title>Presentations - BullyBlock</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        #presentations {
+            padding: 20px;
+        }
+        .presentation-container {
+            margin-bottom: 40px; /* Adds space between presentations */
+        }
         #presentations iframe {
             margin-left: 0px;
+            width: 100%; /* Make the iframe responsive */
+            height: 647px; /* Fixed height for the iframe */
         }
         .download-link {
             margin: 10px 0;
             display: inline-block;
             font-size: 16px;
+            color: blue; /* Change color for visibility */
+            text-decoration: underline; /* Add underline for better indication */
         }
     </style>
 </head>
@@ -47,19 +57,19 @@
             <div class="presentation-container">
                 <iframe
                     src="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/embed?start=false&loop=false&delayms=3000"
-                    frameborder="0" width="1100" height="647" allowfullscreen="true" mozallowfullscreen="true"
+                    frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
                     webkitallowfullscreen="true" tabindex="-1"></iframe>
                 <a href="https://docs.google.com/presentation/d/1gA1j7jEby3LysskPcadzXfHXlCDd0SvBf_9gUi3NMfU/export/pdf" 
-                   class="download-link" target="_blank">Download PDF</a>
+                   class="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
             </div>
-             </div>
+
             <div class="presentation-container">
                 <iframe
                     src="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/embed?start=false&loop=false&delayms=3000"
-                    frameborder="0" width="1100" height="647" allowfullscreen="true" mozallowfullscreen="true"
+                    frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
                     webkitallowfullscreen="true" tabindex="-1"></iframe>
                 <a href="https://docs.google.com/presentation/d/e/2PACX-1vRA6Oca31Wor06AFVzOl_Ao0AuWszLG8pSdUUiv5H9yhPcpY_DrIwD6qOh4pGWPQj9vb-ZPULonaaSU/export/pdf" 
-                   class="download-link" target="_blank">Download PDF</a>
+                   class="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
             </div>
         </section>
     </main>
@@ -72,3 +82,4 @@
 </body>
 
 </html>
+
