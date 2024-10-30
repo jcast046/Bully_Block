@@ -223,7 +223,7 @@ section .section-image {
 
 .presentation-container {
   position: relative; /* Allows absolute positioning of children */
-  margin: 20px auto; /* Center the container */
+  margin: 40px auto; /* Center the container */
   text-align: center; /* Center any text within */
   padding: 20px; /* Add some padding around */
   max-width: 1000px; /* Set a max width */
