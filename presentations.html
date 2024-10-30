@@ -10,21 +10,27 @@
         #presentations {
             padding: 20px;
         }
+
         .presentation-container {
             margin-bottom: 40px; /* Space between presentations */
-            text-align: center; /* Center the content */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center the items */
+            text-align: center; /* Center text */
         }
+
         .presentation-container h3 {
             margin: 10px 0; /* Space above and below the title */
         }
+
         #presentations iframe {
             width: 100%; /* Make the iframe responsive */
             height: 647px; /* Fixed height for the iframe */
             border: none; /* Remove any default border */
         }
+
         .download-link {
-            display: block;
-            margin: 10px auto 0; /* Centers the link below each presentation */
+            margin-top: 10px; /* Space above the download link */
             font-size: 16px;
             color: blue; /* Change color for visibility */
             text-decoration: underline; /* Underline for visibility */
@@ -49,7 +55,7 @@
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="team.html">Team Bio</a></li>
                     <li><a href="presentations.html">Presentations</a></li>
-                    <li><a href="labs.html">Labs</a></li> 
+                    <li><a href="labs.html">Labs</a></li>
                     <li><a href="references.html">References</a></li>
                     <li><a href="glossary.html">Glossary</a></li>
                 </ul>
@@ -91,4 +97,3 @@
 </body>
 
 </html>
-
