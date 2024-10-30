@@ -29,28 +29,35 @@ header {
   z-index: 100;
   background: #333;
   color: white;
-  padding: 10px 0;
-  text-align: center;
+  padding: 10px 20px; /* Added padding */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 header .nav-container img {
   width: 200px;
-  margin-left: 20px;
   margin-bottom: 10px;
   height: auto;
-}
-
-header .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
 
 header h1 {
   margin-top: 10px;
   font-size: 37px;
+  flex: 1; /* Allow title to take available space */
+  text-align: left; /* Align title to the left */
+}
+
+header .download-link {
+  margin-left: auto; /* Push download link to the right */
+  text-align: right; /* Right-align text */
+  color: white; /* Make the link white */
+  text-decoration: none; /* Remove underline */
+}
+
+header .download-link:hover {
+  color: #6fa9ff; /* Change color on hover */
 }
 
 .squashed-image-container {
@@ -214,14 +221,26 @@ section .section-image {
   font-size: 14px;
 }
 
-.presentation-container,
+.presentation-container {
+  position: relative; /* Allows absolute positioning of children */
+  margin: 20px auto; /* Center the container */
+  text-align: center; /* Center any text within */
+  padding: 20px; /* Add some padding around */
+  max-width: 1000px; /* Set a max width */
+}
+
+.presentation-container iframe {
+  width: 100%; /* Make iframe responsive */
+  height: 600px; /* Set a fixed height or adjust as needed */
+  border: none; /* Remove default border */
+}
+
 .docs-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.presentation-container,
 .docs-container iframe {
   max-width: 100%;
   border-radius: 8px;
@@ -351,54 +370,15 @@ footer a:hover {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 18px;
-  }
-
-  header .nav-container img {
-    width: 150px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    height: auto;
+    font-size: 22px;
   }
 
   nav ul {
-    font-size: 15px;
-    gap: 15px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
   }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes dropDown {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes raiseUp {
-  0% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(0);
+  nav ul li {
+    margin: 10px 0; /* Add some vertical spacing */
   }
 }
