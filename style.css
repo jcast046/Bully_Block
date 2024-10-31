@@ -269,6 +269,13 @@ footer a:hover {
     font-size: 28px;
   }
 
+  header .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   nav ul {
     font-size: 15px;
     gap: 15px;
@@ -279,6 +286,10 @@ footer a:hover {
     padding: 10px;
   }
 
+  .presentation-container iframe {
+    height: 450px; /* Adjust height as needed */
+  }
+
   section {
     margin: 20px;
     padding: 20px;
@@ -287,10 +298,14 @@ footer a:hover {
   .menu-toggle {
     width: 25px;
     height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin: 10px auto;
     margin-bottom: 5px;
-    margin-right: 40px;
+    margin-right: 70px;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -353,6 +368,7 @@ footer a:hover {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease;
+    margin-right: 35px;
   }
 
   .nav-links.open {
@@ -380,5 +396,13 @@ footer a:hover {
 
   nav ul li {
     margin: 10px 0; /* Add some vertical spacing */
+  }
+
+  .presentation-container{
+    padding: 5px; /* Reduce padding */
+  }
+
+  .presentation-container iframe {
+    height: 300px; /* Adjust height as needed */
   }
 }
